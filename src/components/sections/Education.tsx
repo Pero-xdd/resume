@@ -1,4 +1,4 @@
-import { GraduationCap, MapPin, BookOpen, Award, FileText } from 'lucide-react'
+import { GraduationCap, MapPin, BookOpen, Award } from 'lucide-react'
 import SectionTitle from '@/components/SectionTitle'
 import { Badge } from '@/components/ui/badge'
 import { education } from '@/data/resume'
@@ -46,7 +46,7 @@ export default function Education() {
                         {edu.location}
                       </span>
                       {edu.highlight && (
-                        <Badge variant="success">在读</Badge>
+                        <Badge variant="success">已毕业</Badge>
                       )}
                     </div>
 
@@ -75,19 +75,6 @@ export default function Education() {
                         ))}
                       </div>
                     </div>
-
-                    {/* Research */}
-                    {edu.research && (
-                      <div className="mb-4">
-                        <p className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-foreground/70">
-                          <FileText className="h-4 w-4" />
-                          研究成果
-                        </p>
-                        <p className="rounded-lg bg-secondary/50 p-3 text-sm italic leading-relaxed text-foreground/80">
-                          {edu.research}
-                        </p>
-                      </div>
-                    )}
 
                     {/* Honors */}
                     <div>

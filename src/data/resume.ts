@@ -3,11 +3,10 @@ export const personalInfo = {
   nameEn: 'Li Zhenyang',
   age: 26,
   gender: '男',
-  origin: '江西',
+  origin: '上海',
   lab: '哈工大感知计算实验室',
   university: '哈尔滨工业大学',
-  degree: '计算机技术 · 硕士在读',
-  phone: '18370717877',
+  degree: '计算机技术 · 硕士',
   email: 'Lee_the_goat@foxmail.com',
   social: 'Lee the goat',
   tagline: '深耕计算机系统，探索感知计算前沿',
@@ -33,8 +32,6 @@ export const education: EducationItem[] = [
     location: '哈尔滨',
     courses: ['最优化方法', '人工智能原理及应用', '计算机系统性能评价'],
     honors: ['2025 研究生年度特等奖学金（前20%，¥22,000）'],
-    research:
-      '《Spatially Topology-Preserving Deep Image Segmentation via Matched Merge Trees》',
     highlight: true,
   },
   {
@@ -77,43 +74,31 @@ export interface ExperienceItem {
 
 export const experiences: ExperienceItem[] = [
   {
-    period: '2026.05 - 2026.06',
-    company: '腾讯 · 微信事业部',
-    role: '后台开发实习生',
-    location: '广州',
-    description: '参与微信核心功能模块的后台开发与维护工作',
-    details: [
-      '参与微信朋友圈功能的后台逻辑开发与性能优化',
-      '负责微信收藏功能的存储与检索链路维护',
-      '参与小薇助手（AI 辅助工具）相关后台服务开发',
-    ],
-    tags: ['后台开发', '微信生态', '高并发', '分布式系统'],
+    period: '2025.06 - 2025.09',
+    company: '上海 A 公司',
+    role: '服务端开发',
+    location: '上海',
+    description: 'storage infra',
+    details: [],
+    tags: [],
   },
   {
     period: '2025.12 - 2026.03',
     company: '上海 A 公司',
-    role: '服务端开发实习生',
+    role: '服务端开发',
     location: '上海',
-    description: '负责管控平台的开发与服务端架构维护',
-    details: [
-      '参与管控系统的设计与开发，实现服务资源的统一管理与调度',
-      '负责管控平台核心接口的开发与维护，提升系统可用性',
-      '协助团队完成管控流程的自动化改造',
-    ],
-    tags: ['服务端开发', '管控系统', '系统架构', '自动化'],
+    description: '管控',
+    details: [],
+    tags: [],
   },
   {
-    period: '2025.06 - 2025.09',
-    company: '上海 A 公司',
-    role: '服务端开发实习生',
-    location: '上海',
-    description: '参与存储基础设施（Storage Infra）的开发与维护',
-    details: [
-      '参与底层存储基础设施的设计与开发',
-      '负责存储系统的稳定性保障与性能调优',
-      '协助完成存储组件的迭代升级与文档编写',
-    ],
-    tags: ['Storage Infra', '存储系统', '基础设施', '性能优化'],
+    period: '2026.05 - 2026.06',
+    company: '腾讯 · 微信事业部',
+    role: '后台开发',
+    location: '广州',
+    description: '朋友圈 · 收藏 · 小薇助手',
+    details: ['朋友圈', '收藏', '小薇助手'],
+    tags: [],
   },
 ]
 
@@ -173,15 +158,6 @@ export const skillGroups: SkillGroup[] = [
   },
 ]
 
-export const researchPaper = {
-  title: 'Spatially Topology-Preserving Deep Image Segmentation via Matched Merge Trees',
-  abstract:
-    '提出了一种基于匹配合并树（Matched Merge Trees）的深度图像分割方法，在保持分割结果拓扑结构的同时提升分割精度。该方法将拓扑数据分析中的合并树理论与深度学习模型相结合，有效解决了传统分割方法中拓扑结构丢失的问题。',
-  venue: '感知计算实验室研究成果',
-  year: '2025',
-  keywords: ['深度学习', '图像分割', '拓扑保持', '合并树', '拓扑数据分析'],
-}
-
 export interface NavLink {
   label: string
   href: string
@@ -192,6 +168,5 @@ export const navLinks: NavLink[] = [
   { label: '教育', href: '#education' },
   { label: '经历', href: '#experience' },
   { label: '技能', href: '#skills' },
-  { label: '研究', href: '#research' },
   { label: '联系', href: '#contact' },
 ]

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, Phone, User, Copy, Check } from 'lucide-react'
+import { Mail, User, Copy, Check } from 'lucide-react'
 import SectionTitle from '@/components/SectionTitle'
 import { personalInfo } from '@/data/resume'
 
@@ -8,7 +8,7 @@ interface ContactCard {
   label: string
   value: string
   href: string
-  type: 'email' | 'phone' | 'social'
+  type: 'email' | 'social'
   gradient: string
 }
 
@@ -20,14 +20,6 @@ const contacts: ContactCard[] = [
     href: `mailto:${personalInfo.email}`,
     type: 'email',
     gradient: 'from-blue-500 to-indigo-600',
-  },
-  {
-    icon: Phone,
-    label: '电话',
-    value: personalInfo.phone,
-    href: `tel:${personalInfo.phone}`,
-    type: 'phone',
-    gradient: 'from-emerald-500 to-teal-600',
   },
   {
     icon: User,
@@ -57,7 +49,7 @@ export default function Contact() {
           欢迎通过以下方式与我联系，无论是学术交流、求职面试还是技术讨论，期待你的消息。
         </p>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {contacts.map((contact) => (
             <div
               key={contact.label}

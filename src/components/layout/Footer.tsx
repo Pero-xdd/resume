@@ -1,5 +1,5 @@
 import { personalInfo, navLinks } from '@/data/resume'
-import { Mail, Phone, User } from 'lucide-react'
+import { Mail, User } from 'lucide-react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -42,13 +42,6 @@ export default function Footer() {
             >
               <Mail className="h-4 w-4" />
               {personalInfo.email}
-            </a>
-            <a
-              href={`tel:${personalInfo.phone}`}
-              className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
-            >
-              <Phone className="h-4 w-4" />
-              {personalInfo.phone}
             </a>
             <span className="flex items-center gap-2 text-sm text-muted-foreground">
               <User className="h-4 w-4" />

@@ -9,7 +9,7 @@ export default function SEO() {
       <title>{`${personalInfo.name} | ${personalInfo.lab} - ${personalInfo.degree}`}</title>
       <meta
         name="description"
-        content={`${personalInfo.name}，${personalInfo.university}${personalInfo.degree}，${personalInfo.lab}成员。研究方向为深度图像分割与拓扑保持，拥有腾讯微信事业部及多段服务端开发实习经历。电话：${personalInfo.phone}，邮箱：${personalInfo.email}`}
+        content={`${personalInfo.name}，${personalInfo.university}${personalInfo.degree}，${personalInfo.lab}成员。研究方向为深度图像分割与拓扑保持，拥有腾讯微信事业部及多段服务端开发实习经历。邮箱：${personalInfo.email}`}
       />
       <meta
         name="keywords"

@@ -44,27 +44,31 @@ export default function Experience() {
 
                 {/* Right: Description + details + tags */}
                 <div className="md:col-span-2">
-                  <p className="mb-4 text-base font-medium text-foreground/80">
+                  <p className="text-base font-medium text-foreground/80">
                     {exp.description}
                   </p>
-                  <ul className="mb-4 flex flex-col gap-2">
-                    {exp.details.map((detail, di) => (
-                      <li
-                        key={di}
-                        className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground"
-                      >
-                        <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+                  {exp.details.length > 0 && (
+                    <ul className="mt-4 flex flex-col gap-2">
+                      {exp.details.map((detail, di) => (
+                        <li
+                          key={di}
+                          className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground"
+                        >
+                          <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {exp.tags.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {exp.tags.map((tag) => (
+                        <Badge key={tag} variant="secondary" className="text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

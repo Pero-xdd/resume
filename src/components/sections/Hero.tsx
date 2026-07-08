@@ -1,4 +1,4 @@
-import { ArrowDown, Mail, Phone, MapPin } from 'lucide-react'
+import { ArrowDown, Mail, MapPin } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { personalInfo } from '@/data/resume'
 
@@ -65,13 +65,6 @@ export default function Hero() {
             >
               <Mail className="h-4 w-4" />
               {personalInfo.email}
-            </a>
-            <a
-              href={`tel:${personalInfo.phone}`}
-              className="flex items-center gap-2 transition-colors hover:text-primary"
-            >
-              <Phone className="h-4 w-4" />
-              {personalInfo.phone}
             </a>
           </div>
         </div>
