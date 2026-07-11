@@ -1,101 +1,434 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#4F46E5" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李振洋 | 个人风采展示</title>
+    <meta name="description" content="李振洋，哈工大感知计算实验室硕士，定居上海。教育背景、实习经历与未来规划。">
+    <meta name="keywords" content="李振洋,哈工大,感知计算实验室,计算机技术硕士,个人风采">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!-- Primary Meta Tags -->
-    <title>李振洋 | 哈工大感知计算实验室 - 计算机技术硕士</title>
-    <meta name="title" content="李振洋 | 哈工大感知计算实验室 - 计算机技术硕士" />
-    <meta name="description" content="李振洋，哈尔滨工业大学计算机技术硕士，感知计算实验室成员。研究方向为深度图像分割与拓扑保持，拥有腾讯微信事业部及多段服务端开发实习经历。邮箱：Lee_the_goat@foxmail.com" />
-    <meta name="keywords" content="李振洋,Lee the goat,哈工大,哈尔滨工业大学,感知计算实验室,计算机技术硕士,深度图像分割,腾讯微信实习,服务端开发,计算机科学与技术,个人简历,求职" />
-    <meta name="author" content="李振洋" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="language" content="zh-CN" />
-    <meta name="revisit-after" content="7 days" />
-    <link rel="canonical" href="https://lizhenyang.github.io/" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="profile" />
-    <meta property="og:url" content="https://lizhenyang.github.io/" />
-    <meta property="og:title" content="李振洋 | 哈工大感知计算实验室 - 计算机技术硕士" />
-    <meta property="og:description" content="李振洋，哈尔滨工业大学计算机技术硕士，感知计算实验室成员。研究方向为深度图像分割与拓扑保持，拥有腾讯微信事业部及多段服务端开发实习经历。" />
-    <meta property="og:image" content="https://lizhenyang.github.io/og-image.png" />
-    <meta property="og:locale" content="zh_CN" />
-    <meta property="og:site_name" content="李振洋个人简历" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="李振洋 | 哈工大感知计算实验室 - 计算机技术硕士" />
-    <meta name="twitter:description" content="李振洋，哈尔滨工业大学计算机技术硕士，感知计算实验室成员。研究方向为深度图像分割与拓扑保持，拥有腾讯微信事业部及多段服务端开发实习经历。" />
-    <meta name="twitter:image" content="https://lizhenyang.github.io/og-image.png" />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "李振洋",
-      "alternateName": "Lee the goat",
-      "url": "https://lizhenyang.github.io/",
-      "image": "https://lizhenyang.github.io/images/avatar.png",
-      "email": "mailto:Lee_the_goat@foxmail.com",
-      "gender": "Male",
-      "nationality": "Chinese",
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "哈尔滨工业大学",
-          "department": "感知计算实验室",
-          "address": "哈尔滨"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "哈尔滨工业大学（威海）",
-          "address": "威海"
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #818CF8;
+            --primary-dark: #3730A3;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --accent: #F59E0B;
         }
-      ],
-      "knowsAbout": ["深度学习", "图像分割", "服务端开发", "计算机系统", "C++", "Java", "Python"],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "腾讯微信事业部"
-      },
-      "description": "哈尔滨工业大学计算机技术硕士，感知计算实验室成员，研究方向为深度图像分割与拓扑保持。"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "李振洋",
-        "description": "哈工大计算机技术硕士 | 感知计算实验室 | 深度图像分割研究"
-      },
-      "url": "https://lizhenyang.github.io/"
-    }
-    </script>
 
-    <!-- Prevent dark mode flash -->
-    <script>
-      (function () {
-        const stored = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (stored === 'dark' || (!stored && prefersDark)) {
-          document.documentElement.classList.add('dark');
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
         }
-      })();
-    </script>
 
-    <!-- Google Fonts: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4F46E5 0%, #6366F1 30%, #8B5CF6 70%, #A855F7 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 60%, rgba(255,255,255,0.08) 0%, transparent 50%);
+        }
+
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .hero-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        .hero-info span { display: inline-flex; align-items: center; gap: 6px; }
+        .hero-info svg { width: 18px; height: 18px; opacity: 0.8; }
+
+        /* Section */
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 64px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--primary), #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* Education Cards */
+        .edu-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-bottom: 32px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .edu-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+
+        .edu-card-inner { display: flex; flex-direction: column; }
+
+        @media (min-width: 768px) {
+            .edu-card-inner { flex-direction: row; }
+        }
+
+        .edu-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+            .edu-img { width: 320px; height: auto; }
+        }
+
+        .edu-body { padding: 28px 32px; flex: 1; }
+
+        .edu-period {
+            display: inline-block;
+            background: rgba(79, 70, 229, 0.1);
+            color: var(--primary);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .edu-school { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+        .edu-degree { color: var(--primary); font-weight: 600; margin-bottom: 16px; }
+
+        .edu-label { font-weight: 600; color: var(--text); font-size: 0.9rem; margin-top: 12px; margin-bottom: 6px; }
+
+        .course-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .course-tag {
+            background: #F1F5F9;
+            color: var(--text-muted);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .honor-list { list-style: none; }
+        .honor-list li {
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+        .honor-list li::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Experience Cards */
+        .exp-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-bottom: 32px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid var(--primary);
+        }
+
+        .exp-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+
+        .exp-imgs { display: flex; gap: 2px; }
+
+        .exp-imgs img {
+            width: 50%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .exp-imgs.single img { width: 100%; height: 220px; }
+
+        .exp-body { padding: 24px 32px; }
+
+        .exp-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+
+        .exp-company { font-size: 1.2rem; font-weight: 700; }
+
+        .exp-period {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            background: #F1F5F9;
+            padding: 3px 12px;
+            border-radius: 12px;
+        }
+
+        .exp-role { color: var(--primary); font-weight: 600; margin-bottom: 8px; }
+        .exp-desc { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Future Section */
+        .future-card {
+            background: linear-gradient(135deg, #1E293B 0%, #312E81 100%);
+            color: white;
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: 0 8px 40px rgba(49, 46, 129, 0.3);
+        }
+
+        .future-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .future-card p {
+            font-size: 1.05rem;
+            line-height: 2;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .future-card .highlight { color: var(--accent); font-weight: 600; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate { animation: fadeInUp 0.8s ease-out forwards; }
+
+        .section:nth-child(1) .edu-card:nth-child(3) { animation-delay: 0.1s; }
+        .section:nth-child(1) .edu-card:nth-child(4) { animation-delay: 0.2s; }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content animate">
+            <h1>李振洋</h1>
+            <div class="hero-info">
+                <span>📍 户籍：上海</span>
+                <span>🔬 哈工大感知计算实验室</span>
+                <span>✉️ Lee_the_goat@foxmail.com</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 教育背景 -->
+    <section class="section">
+        <h2 class="section-title">教育背景</h2>
+        <p class="section-subtitle">EDUCATION</p>
+
+        <!-- 本科 -->
+        <div class="edu-card animate">
+            <div class="edu-card-inner">
+                <img src="images/weihai.jpg" alt="哈工大威海" class="edu-img">
+                <div class="edu-body">
+                    <span class="edu-period">2019.09 - 2023.06</span>
+                    <h3 class="edu-school">哈尔滨工业大学（威海）</h3>
+                    <p class="edu-degree">计算机科学与技术（本科）</p>
+
+                    <p class="edu-label">主修课程</p>
+                    <div class="course-tags">
+                        <span class="course-tag">计算机组成原理</span>
+                        <span class="course-tag">计算机网络</span>
+                        <span class="course-tag">数据结构与算法</span>
+                        <span class="course-tag">操作系统</span>
+                        <span class="course-tag">数据库技术</span>
+                        <span class="course-tag">CSAPP</span>
+                        <span class="course-tag">编译原理</span>
+                        <span class="course-tag">计算机体系结构</span>
+                        <span class="course-tag">微积分B</span>
+                        <span class="course-tag">线性代数</span>
+                        <span class="course-tag">概率论与数理统计</span>
+                        <span class="course-tag">数理逻辑</span>
+                        <span class="course-tag">近世代数</span>
+                        <span class="course-tag">离散数学</span>
+                        <span class="course-tag">C语言</span>
+                        <span class="course-tag">C++</span>
+                        <span class="course-tag">Java</span>
+                        <span class="course-tag">Python</span>
+                    </div>
+
+                    <p class="edu-label">校内荣誉</p>
+                    <ul class="honor-list">
+                        <li>2020 哈尔滨工业大学优秀学生</li>
+                        <li>2021 暑期优秀社会实践个人</li>
+                        <li>2021 哈尔滨工业大学优秀学生</li>
+                        <li>2021 社会工作优秀奖学金</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 硕士 -->
+        <div class="edu-card animate">
+            <div class="edu-card-inner">
+                <img src="images/hit.jpg" alt="哈尔滨工业大学" class="edu-img">
+                <div class="edu-body">
+                    <span class="edu-period">2023.09 - 2026.06</span>
+                    <h3 class="edu-school">哈尔滨工业大学</h3>
+                    <p class="edu-degree">计算机技术（硕士）</p>
+
+                    <p class="edu-label">主修课程</p>
+                    <div class="course-tags">
+                        <span class="course-tag">最优化方法</span>
+                        <span class="course-tag">人工智能原理及应用</span>
+                        <span class="course-tag">计算机系统性能评价</span>
+                    </div>
+
+                    <p class="edu-label">校内荣誉</p>
+                    <ul class="honor-list">
+                        <li>2025 研究生年度特等奖学金（前20%，¥22,000）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社会实践与实习经历 -->
+    <section class="section" style="background: #F1F5F9; max-width: 100%; padding: 64px 20px;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 class="section-title">社会实践与实习经历</h2>
+            <p class="section-subtitle">EXPERIENCE</p>
+
+            <!-- 华为 -->
+            <div class="exp-card">
+                <div class="exp-imgs">
+                    <img src="images/huawei.jpeg" alt="华为Atlas200">
+                    <img src="images/neosoft.jpg" alt="社会实践">
+                </div>
+                <div class="exp-body">
+                    <div class="exp-header">
+                        <span class="exp-company">社会实践 · 华为 Atlas 200</span>
+                        <span class="exp-period">2021</span>
+                    </div>
+                    <p class="exp-role">人脸识别项目实践</p>
+                    <p class="exp-desc">基于华为 Atlas 200 开发平台实现人脸识别功能，将人工智能理论与工程实践相结合。</p>
+                </div>
+            </div>
+
+            <!-- 上海A公司 storage -->
+            <div class="exp-card">
+                <div class="exp-imgs single">
+                    <img src="images/tongji.jpg" alt="上海A公司">
+                </div>
+                <div class="exp-body">
+                    <div class="exp-header">
+                        <span class="exp-company">上海 A 公司</span>
+                        <span class="exp-period">2025.06 - 2025.09</span>
+                    </div>
+                    <p class="exp-role">服务端开发</p>
+                    <p class="exp-desc">内容：Storage</p>
+                </div>
+            </div>
+
+            <!-- 上海A公司 infra -->
+            <div class="exp-card">
+                <div class="exp-imgs single">
+                    <img src="images/shanghai.jpg" alt="上海A公司">
+                </div>
+                <div class="exp-body">
+                    <div class="exp-header">
+                        <span class="exp-company">上海 A 公司</span>
+                        <span class="exp-period">2025.12 - 2026.03</span>
+                    </div>
+                    <p class="exp-role">服务端开发</p>
+                    <p class="exp-desc">内容：Infra</p>
+                </div>
+            </div>
+
+            <!-- 广州B公司 -->
+            <div class="exp-card">
+                <div class="exp-imgs single">
+                    <img src="images/conton.jpg" alt="广州B公司">
+                </div>
+                <div class="exp-body">
+                    <div class="exp-header">
+                        <span class="exp-company">广州 B 公司</span>
+                        <span class="exp-period">2026.05 - 2026.06</span>
+                    </div>
+                    <p class="exp-role">后台开发</p>
+                    <p class="exp-desc">内容：朋友圈 · 收藏 · 小薇助手</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 未雨绸缪 -->
+    <section class="section">
+        <h2 class="section-title">未雨绸缪</h2>
+        <p class="section-subtitle">FUTURE PLAN</p>
+
+        <div class="future-card">
+            <h3>🚀 未来规划</h3>
+            <p>
+                目前定居<span class="highlight">上海</span>，从事<span class="highlight">互联网</span>方面的工作，对工作内容十分满意。
+            </p>
+            <p style="margin-top: 16px;">
+                如果 2030 年左右面临失业，计划：<br>
+                ① 攻读<span class="highlight">华东师范大学软件学院</span>或<span class="highlight">上海交通大学电气学院</span>的博士；<br>
+                ② 寻求上海专科或学院的<span class="highlight">教职类工作</span>，教授计算机类、计算拓扑学类的学科或课程。
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 李振洋 · 个人风采展示</p>
+    </footer>
+
+</body>
 </html>
