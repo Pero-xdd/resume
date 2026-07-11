@@ -26,7 +26,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
         body {
             font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -684,6 +684,17 @@
             font-size: 1rem;
         }
 
+        .exp-subtitle {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 48px 0 24px;
+            padding-left: 16px;
+            border-left: 4px solid var(--primary);
+            color: var(--text);
+        }
+
+        .exp-subtitle:first-child { margin-top: 0; }
+
         /* Future Section */
         .future-section {
             background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #312E81 100%);
@@ -861,7 +872,8 @@
         <div class="mobile-menu-close" onclick="toggleMenu()">×</div>
         <a href="#home" onclick="toggleMenu()">首页</a>
         <a href="#education" onclick="toggleMenu()">教育背景</a>
-        <a href="#experience" onclick="toggleMenu()">实践经历</a>
+        <a href="#social" onclick="toggleMenu()">社会实践经历</a>
+        <a href="#intern" onclick="toggleMenu()">互联网实习经历</a>
         <a href="#future" onclick="toggleMenu()">未雨绸缪</a>
     </div>
 
@@ -871,7 +883,8 @@
         <div class="nav-links">
             <a href="#home">首页</a>
             <a href="#education">教育背景</a>
-            <a href="#experience">实践经历</a>
+            <a href="#social">社会实践经历</a>
+            <a href="#intern">互联网实习经历</a>
             <a href="#future">未雨绸缪</a>
         </div>
         <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
@@ -996,6 +1009,11 @@
                                     <span class="course-tag">最优化方法</span>
                                     <span class="course-tag">人工智能原理及应用</span>
                                     <span class="course-tag">计算机系统性能评价</span>
+                                    <span class="course-tag">工程伦理</span>
+                                    <span class="course-tag">医学图像分析</span>
+                                    <span class="course-tag">复杂大系统计算</span>
+                                    <span class="course-tag">数据通信与计算机网络</span>
+                                    <span class="course-tag">研究生英语</span>
                                 </div>
 
                                 <p class="edu-label">🏆 校内荣誉</p>
@@ -1010,12 +1028,12 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="section exp-section" id="experience">
+    <!-- Social Practice Section -->
+    <section class="section exp-section" id="social">
         <div class="section-inner">
             <div class="section-header reveal reveal-up">
-                <h2 class="section-title">社会实践与实习经历</h2>
-                <p class="section-subtitle">Experience</p>
+                <h2 class="section-title">社会实践经历</h2>
+                <p class="section-subtitle">Social Practice</p>
                 <div class="section-line"></div>
             </div>
 
@@ -1052,7 +1070,20 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Internship Section -->
+    <section class="section" id="intern">
+        <div class="section-inner">
+            <div class="section-header reveal reveal-up">
+                <h2 class="section-title">互联网实习经历</h2>
+                <p class="section-subtitle">Internship</p>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="exp-list">
                 <!-- 上海A storage -->
                 <div class="exp-card reveal reveal-up">
                     <div class="exp-card-inner">
@@ -1093,7 +1124,7 @@
                             <span class="exp-period">2026.05 - 2026.06</span>
                             <h3 class="exp-company">广州 B 公司</h3>
                             <p class="exp-role">后台开发</p>
-                            <p class="exp-desc">内容：朋友圈 · 收藏 · 小薇助手</p>
+                            <p class="exp-desc">内容：朋友圈 · 收藏 · 小微助手</p>
                         </div>
                     </div>
                 </div>
@@ -1121,11 +1152,11 @@
                 <div class="future-plan">
                     <div class="future-plan-item reveal reveal-up reveal-delay-1">
                         <div class="num">01</div>
-                        <p>如果 2030 年左右面临失业，计划攻读 <span class="future-highlight">华东师范大学软件学院</span> 或 <span class="future-highlight">上海交通大学电气学院</span> 的博士。</p>
+                        <p>如果 2030 年左右面临失业，计划攻读 <span class="future-highlight">华东师范大学 软件学院</span> 或 <span class="future-highlight">上海交通大学 电气学院</span> 的博士。</p>
                     </div>
                     <div class="future-plan-item reveal reveal-up reveal-delay-2">
                         <div class="num">02</div>
-                        <p>寻求上海专科或学院的 <span class="future-highlight">教职类工作</span>，教授计算机类、计算拓扑学类的学科或课程。</p>
+                        <p>寻求上海专科学校或职业学院的 <span class="future-highlight">教职类工作</span>，教授计算机类、计算拓扑学类等学科的课程。</p>
                     </div>
                 </div>
             </div>
