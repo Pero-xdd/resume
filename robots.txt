@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pero-xdd.github.io/resume/sitemap.xml
+Sitemap: https://xn--2vuq5g74f.top/sitemap.xml
